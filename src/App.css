@@ -102,12 +102,26 @@
   font-weight: bold;
 }
 
-/* Estilos para ItemListContainer */
+/* estilo para itemlistcontainer */
 
-.item-list-container {
-  padding: 2rem;
-  text-align: center;
-  background-color: #bfc3c9;
+.itemlistcontainer {
+  border: #333;
+  font-size:small;
+ 
+  
+}
+.rowitem {
+  display: flex;
+  
 }
 
+.colitem {
+  display: flex;
+ 
+}
 
+.imgsize {
+  width: 200px;
+  height: 200x;
+  
+}
