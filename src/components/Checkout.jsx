@@ -4,7 +4,7 @@ import  { useCart } from '../context/CartContext'
 import  { newOrder } from '../firebase/bd'
 import { serverTimestamp } from "firebase/firestore"
 import {useNavigate} from 'react-router'
-  
+
 function Checkout () {
     const navegar = useNavigate()  
     const { cart, getTotal } = useCart() 
@@ -18,9 +18,14 @@ function Checkout () {
             date: serverTimestamp(),
             total: getTotal()
         }
+        if (order.total==0){
+            alert('Carrito sin unidades!')
+            
+        }else {
         newOrder(order)
-       alert('Compra Generada Con exito!')
+        alert('Compra Generada Con exito!')
         
+        }
     }
     return (
     <div className='d-flex align-items-center justify-content-center'>
