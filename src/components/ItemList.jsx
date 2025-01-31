@@ -1,19 +1,15 @@
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-import Button from 'react-bootstrap/Button'
-import Card from 'react-bootstrap/Card'
-import Col from 'react-bootstrap/Col' 
 import Item from './Item'
 
-function ItemList ({productos}) {
-
+function ItemList ({items}) {
 return(
 
-<Container className='itemlistcontainer'>
-          <Row className="rowitem">
-          {productos.map(item => <Item item={item} key={item.id}/>)} 
+      <Container className='itemlistcontainer'>
+          <Row className='rowitem'>
+            {items.map(item => <Item item={item} key={item.id}/>)} 
           </Row>
-        </Container>
-)
+      </Container>
+  )
 }
 export default ItemList

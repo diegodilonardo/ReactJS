@@ -1,31 +1,35 @@
-import { useState, useEffect } from "react";
+import { useState, useContext} from "react"
+import { CartContext } from "../context/CartContext"
 
-function ItemCount () {
+
+function ItemCount ({item}) {
     const [contador, setContador] = useState(0)
-useEffect (() => {
+    const { addToCart } = useContext (CartContext)
+    const sumarProducto = () => {setContador(contador + 1)}
 
-    return () => {
-
-}
-},[contador])
-
-const sumarproducto = () => {
-    setContador(contador + 1)   
-        
-}
-
-const restarproducto = () => {
-    setContador(contador - 1)
-}
-
-
+    const restarProducto = () => {
+            if (contador>0){
+            setContador(contador - 1)
+            }else{
+            
+                alert('No se pueden ingresar unidades menores a 0')
+            }
+    }
+    const agregarAlCarrito = () => {
+        if (contador==0){
+            alert('No se puede agregar un producto sin unidades')
+        }else{
+            addToCart ({...item, cantidad : contador})
+        }
+    }
 return (
-<div>
-<p style={{border: 'solid 1px white'}}>{contador}</p>
-    <button style={{backgroundColor:'blue'}} onClick={sumarproducto}>Sumar Unidades</button>
-    <button style={{backgroundColor:'red'}} onClick={restarproducto}>Restar Unidades</button>
-</div>
-)
-}
+    <div>
+        <p style={{border: 'solid 1px white'}}>{contador}</p>
+            <button style={{backgroundColor:'blue'}} onClick={sumarProducto}>Sumar Unidades</button>
+            <button style={{backgroundColor:'red'}} onClick={restarProducto}>Restar Unidades</button>
+            <button style={{backgroundColor:'yellow'}} onClick={agregarAlCarrito}>Agregar al Carrito</button>
+        </div>
+    ) 
  
+}
 export default ItemCount
