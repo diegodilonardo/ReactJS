@@ -1,8 +1,24 @@
-# React + Vite
+# Carrito de Compras - React JS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
 
-Currently, two official plugins are available:
+Esta es una aplicación web de carrito de compras desarrollada con React JS. Permite a los usuarios navegar por una variedad de productos, filtrarlos por categoría (calzado, indumentaria y accesorios), añadirlos al carrito de compras y completar su orden de compra con sus datos personales.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Funcionalidades
+
+- **Ver productos:** Los usuarios pueden ver todos los productos disponibles en la base de datos.
+- **Filtrar productos por categoría:** Los productos se pueden filtrar por las categorías de calzado, indumentaria y accesorios.
+- **Carrito de compras:** Los usuarios pueden añadir productos al carrito, ver el contenido del carrito y proceder con la compra.
+- **Generar una orden de compra:** Los usuarios pueden completar un formulario con sus datos (nombre, dirección, etc.) para generar una orden de compra.
+  
+## Tecnologías utilizadas
+
+- **React JS:** Librería para construir interfaces de usuario interactivas.
+- **Bootstrap:** Framework de diseño para la interfaz de usuario.
+- **Firebase:** Plataforma utilizada para gestionar la base de datos y la autenticación de usuarios.
+- **React Router:** Para manejar la navegación y las rutas dentro de la aplicación.
+  
+## Requisitos
+
+- Node.js
+- npm (Node Package Manager)
